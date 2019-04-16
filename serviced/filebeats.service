@@ -1,0 +1,15 @@
+#/lib/systemd/system/filebeat.service
+[Unit]
+Description=filebeat service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/usr/bin/filebeat --c /etc/filebeat/filebeat.yml
+
+[Install]
+WantedBy=multi-user.target
