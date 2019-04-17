@@ -23,8 +23,8 @@ filebeat.inputs:
     - /var/log/nginx/access.log
   fields:
     vista: nginx
-    tenant: ${TENANT}
-    environment: ${ENVIRONMENT}
+    tenant: #{tenant}
+    environment: #{environment}
   fields_under_root: true
 
     
