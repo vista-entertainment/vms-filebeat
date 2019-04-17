@@ -18,7 +18,7 @@ sudo cp systemd/filebeat.service /etc/systemd/system/filebeat.service
 sudo systemctl daemon-reload
 
 sudo systemctl enable filebeat
-sudo systemctl status filebeat
+sudo systemctl start filebeat
 
 #restart filebeat
 sudo systemctl status filebeat
